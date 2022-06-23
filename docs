@@ -1,1 +1,31 @@
+Dans le but d'établir les quatre processus d’entreprises, nous avons sélectionné ceux qui pourraient être considérés les plus courants dans une entreprise encadrée dans l’industrie des services comme secteur économique québécois.   Ces processus représentent aussi les principales opérations réalisées par l'organisation :
+●	Le revenu sur les ventes du service: L’organisation est intéressée à la performance de ses revenus obtenus de la location de véhicules.
+●	Le service à la clientèle: L’entreprise désire connaître le niveau de satisfaction durant et après le processus de vente ainsi que l'engagement de sa clientèle.
+●	Le développement du produit: La gestion du positionnement de son service dans un marché concurrentiel.
+●	Le développement des Ressources Humaines: L'entreprise a un plan de commissions pour les agents de ventes mais désire savoir comment stimuler l'efficacité de ses employées.
+●	Processus de commercialisation (marketing): Comprend tout ce qui est nécessaire pour développer et lancer un nouveau produit sur le marché, donc le marketing de l’entreprise comporte des enjeux futurs. L'entreprise compte actuellement avec des fournisseurs du contenu marketing.
+Nous avons choisi comme processus à modéliser le processus de ventes du service parce que, premièrement ce processus représente la source de la plupart des revenus de VoyageAuto et deuxièmement, l’analyse de son Entrepôt de Données (DW) sera plus riche par rapport aux autres processus mentionnés, ce qui permettra, avec l’Intelligence d’affaires (BI), découvrir des informations potentiellement intéressantes qui aideront à la prise de décision. 
+Le processus de vente répond, en conséquence, aux besoins d’optimisation, s’il y a lieu, et aux incertitudes posés pendant la rencontre initial avec le représentant de l’entreprise.
+Étapes de modélisation:
+Processus d’affaire: Selon la méthode Kimball on devrait représenter notre processus d’affaire (au niveau plus bas) comme verbes d’action, dans ces cas, nous disons que le processus plus simple de notre modèle de ventes est le traitement de réservations de véhicules. Ce processus est typiquement soutenu pour le système de réservation de VoyageAuto et génère ou produit des indicateurs de rendement clés (KPI, en anglais) qui serviront à construire notre table de fait.
+
+Grain: Comme le grain représente le niveau de détail de la donnée la plus simple ou atomique, dans notre cas, la donnée plus granulaire est un véhicule réservé dans le système de réservation de VoyageAuto.
+
+Identifier les dimensions: Avec le grain il est plus simple de déterminer les dimensions de notre modèle.  
+●	Dimension Véhicule avec les attributs de hiérarchie de marque, modèle, couleur, année (de fabrication), kilométrage, disponibilité et condition du véhicule location sont nécessaires pour décrire le véhicule et fournir tous les détails.
+●	Dimension Date, avec les attributs de hiérarchie date, mois, quarter, année sont nécessaires pour afficher, par exemple, la date de début de promotion et la date de fin d’une réservation, d’une promotion, etc.
+●	Dimension Réservation, avec les attributs type de réservation et type d’incidents qui ont lieu pendant la location, comme les champs descriptifs restants dans un processus de réservation dans le système de l'entreprise. 
+●	Dimension Client, nous avons les attributs typiques comme l’ID du client, son nom, son adresse
+●	Dimension Succursale, avec les attributs de hiérarchie d’identification de succursale, nom et adresse de succursale, identification de société provinciale, nom de société, etc. Cela donne toute l’information concernant un grand nombre de succursales couvrant chacune des provinces et les plusieurs sociétés provinciales mais aussi cela représente les points initial et finale d’une réservation.
+●	Dimension Promotion, apparemment, une importante partie de revenus provient de la promotion sur ses tarifs réguliers.  Avec des attributs descriptifs comme nom ou code de promotion nous pourrons analyser, par exemple, sous quelle promotion un véhicule a été réservé.
+
+Identifier les faits cette étape s’agit donc de répondre aux questions suivantes : 
+1) La promotion a-t-elle été rentable? Autrement dit, si le nombre de réservations a augmenté au cours de l'année dernière?
+2) Y a-t-il eu des succursales qui ont loué plus de véhicules au cours de l'année dernière? 
+3) Quels sont les 5 premiers clients qui ont fait le plus de réservations? Combien cela représente en total aperçu?
+4) Quelle marque de véhicules a réalisé le bénéfice le plus élevé?
+5) Quel est l’emplacement principal de ces personnes (clients) louant en ligne? 
+6) Si les produits en promotion ont montré une baisse de location juste avant ou après la promotion annulant ainsi tout gain. 
+7) Combien faisons-nous sur la location au cours du dernier exercice financier? Comment cela se compare-t-il aux 2 dernières années? 
+8) Lesquels sont les types de réservations les plus employés: par guichet, par téléphone ou par internet? Lequel génère moins de profit?
 
