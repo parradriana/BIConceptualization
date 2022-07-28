@@ -4,6 +4,6 @@ It is the staging phase of a BI solution.  We identified the busines needs and r
 he was not Walter White (breaking bad joke).
 
 I had the collaboration of my teamwork Helen and Hanane, hope I find their githubs profiles.
-The ERD was designed with VisualParadigme and all documentation of our job (beside the SQL queries) is in French language, so, profitez-en and if you have any questions you can send me a message.
+The ERD was designed with VisualParadigme and all documentation of our job (beside the SQL queries) is in French language, so, profitez-en and if you have any questions  message me and I will answer asap.
 
 
